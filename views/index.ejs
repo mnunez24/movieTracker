@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Tracker</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<nav>
+    <a href="/">Search</a>
+    <a href="/watchlist">Watchlist</a>
+</nav>
+<body>
+    <h1>Movie Tracker</h1>
+
+    <form action="/movies/search" method="GET">
+        <label for="title">Search for a movie:</label>
+        <input type="text" id="title" name="title" required>
+        <button type="submit">Search</button>
+    </form>
+</body>
+
+</html>

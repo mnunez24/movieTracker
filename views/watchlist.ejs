@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Watchlist</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<nav>
+    <a href="/">Search</a>
+    <a href="/watchlist">Watchlist</a>
+</nav>
+<body>
+    <h1>Your Watchlist</h1>
+
+    <% movies.forEach(movie => { %>
+        <div>
+            <h2><%= movie.title %></h2>
+            <img src="<%= movie.poster %>" width="150">
+            <p><%= movie.plot %></p>
+
+            <form action="/movies/delete/<%= movie._id %>" method="POST">
+                <button type="submit">Remove</button>
+            </form>
+        </div>
+
+    <% }) %>
+
+    <a href="/">Back</a>
+</body>
+
+</html>
